@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+int main(){
+	int t,cg,cp,n,p1,p2;
+     // b is count of p1 solved correctly & c is for p2.
+	//printf("Enter the test cases\n");
+	scanf("%d",&t);
+    int cost[t];
+	for(int a=0;a<=t-1;a++){
+        int b=0, c=0;
+	//printf("Cost of green\n");
+	scanf("%d%d",&cg,&cp);
+	//printf("Cost of purple\n");
+	//printf("Enter no. of participants");
+	scanf("%d",&n);
+	for(int i=1;i<=n;i++){
+	//printf("write 1 if ans is correct\n");
+	//printf("write 0 if ans is wrong\n");
+	scanf("%d\n",&p1);
+	scanf("%d",&p2);
+    switch(p1){
+		case 1:
+		b++;
+		case 0:
+        break;
+
+	}
+	switch(p2){
+		case 1:
+		c++;
+		case 0:
+		break;
+		}
+    }
+    if(a%2==0){
+	int x= cg*b;
+	int y= cp*c;
+    cost[a]=(x)+(y); // Min cost
+    }
+	else{
+	int x= cg*c;
+	int y= cp*b;
+    cost[a]=(x)+(y);
+	}
+	}
+    for(int a=0;a<=t-1;a++){
+        printf("%d\n",cost[a]);
+	}
+}
+    
+
+	    
+
+
+
